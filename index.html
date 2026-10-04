@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertiChain</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CertiChain</h1>
+        <p>Blockchain-Based Certificate Verification System</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Verify Certificates with Blockchain</h2>
+            <p>
+                CertiChain provides a secure and transparent way
+                to register and verify academic certificates.
+            </p>
+
+            <button id="connectWallet">
+                Connect MetaMask
+            </button>
+
+            <p id="walletStatus">Wallet not connected</p>
+        </section>
+
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h2>🎓 Register Certificate</h2>
+
+                <input type="text" id="certificateId"
+                       placeholder="Certificate ID">
+
+                <input type="text" id="studentName"
+                       placeholder="Student Name">
+
+                <input type="text" id="course"
+                       placeholder="Course">
+
+                <input type="text" id="institution"
+                       placeholder="Institution">
+
+                <input type="file" id="certificateFile"
+                       accept=".pdf,.png,.jpg,.jpeg">       
+
+                <button id="registerCertificate">
+                    Register Certificate
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h2>🔍 Verify Certificate</h2>
+
+                <input type="text" id="verifyId"
+                       placeholder="Enter Certificate ID">
+
+                <input type="file" id="verifyFile"
+                       accept=".pdf,.png,.jpg,.jpeg">
+       
+
+                <button id="verifyCertificate">
+                    Verify Certificate
+                </button>
+
+                <div id="certificateResult"></div>
+            </div>
+
+
+            <div class="card">
+                <h2>🚫 Revoke Certificate</h2>
+
+                <input type="text" id="revokeId"
+                       placeholder="Certificate ID">
+
+                <button id="revokeCertificate">
+                    Revoke Certificate
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CertiChain © 2026 | Powered by Ethereum Blockchain</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+
+</body>
+</html>
